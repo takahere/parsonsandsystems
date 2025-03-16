@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Playfair Display', 'Shippori Mincho', serif;
+    background-color: #43FF01;
+    color: #000;
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 2rem);
+    position: relative;
+    z-index: 1;
+}
+
+.main-title {
+    font-size: 5rem;
+    font-weight: 400;
+    line-height: 1.1;
+    text-align: center;
+}
+
+.language-switcher {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    font-family: 'Playfair Display', 'Shippori Mincho', serif;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #000;
+    padding: 0.2rem 0.5rem;
+}
+
+.lang-btn.active {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.divider {
+    margin: 0 0.3rem;
+}
+
+.details-link {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 10;
+}
+
+.details-link a {
+    font-family: 'Playfair Display', 'Shippori Mincho', serif;
+    font-size: 1rem;
+    color: #000;
+    text-decoration: none;
+}
+
+.details-link a:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 15%;
+    max-width: 150px;
+    z-index: 0;
+    opacity: 0.85;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 2.5rem;
+    }
+    
+    body {
+        padding: 0.5rem;
+    }
+    
+    .language-switcher {
+        bottom: 0.5rem;
+        left: 0.5rem;
+    }
+    
+    .details-link {
+        bottom: 0.5rem;
+        right: 0.5rem;
+    }
+} 
